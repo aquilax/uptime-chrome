@@ -1,16 +1,27 @@
 {
   "manifest_version": 2,
-  "name": "Uptime",
+  "name": "Chrome Uptime",
   "version": "0.1",
   "description": "Tracks browser uptime",
   "icons": { 
-    "16": "icon_16.png"
-    "48": "icon_48.png"
+    "16": "icon_16.png",
+    "48": "icon_48.png",
     "128": "icon_128.png"
+  },
+  "browser_action": {
+    "default_icon": "icon_19.png"
   },
   "background": {
     "persistent": false,
-    "scripts": ["uptime.js"]
+    "scripts": [
+      "uptime.js"
+    ]
   },
-  "permissions": ["http://*.google.com/", "https://*.google.com/"]
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  "permissions": [
+    "notifications"
+  ],
+  "web_accessible_resources": [
+    "icon_48.png"
+  ]
 }

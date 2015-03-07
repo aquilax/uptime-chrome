@@ -10,7 +10,7 @@ BUILD = ./build
 BUILD_ICONS = $(BUILD)/icons
 BUILD_RAW = $(BUILD)/$(EXT_DIR)
 
-ICON_SIZES = 128
+ICON_SIZES = 16 19 48 128
 
 all: clean dirs icons raw pack
 
@@ -29,6 +29,9 @@ icons:
 raw:
 	cp $(SRC)/manifest.json $(BUILD_RAW)
 	cp $(SRC)/uptime.js $(BUILD_RAW)
+	cp $(BUILD_ICONS)/icon_16.png $(BUILD_RAW)
+	cp $(BUILD_ICONS)/icon_19.png $(BUILD_RAW)
+	cp $(BUILD_ICONS)/icon_48.png $(BUILD_RAW)
 	cp $(BUILD_ICONS)/icon_128.png $(BUILD_RAW)
 
 pack:

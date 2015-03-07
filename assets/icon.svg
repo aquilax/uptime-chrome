@@ -1,5 +1,63 @@
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 769 769" style="image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"><defs><style type="text/css">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xml:space="preserve"
+   viewBox="0 0 769 769"
+   style="image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
+   id="svg3037"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   width="100%"
+   height="100%"
+   sodipodi:docname="icon.svg"><metadata
+     id="metadata3049"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1895"
+     inkscape:window-height="1056"
+     id="namedview3047"
+     showgrid="false"
+     inkscape:zoom="0.31209363"
+     inkscape:cx="-168.21875"
+     inkscape:cy="358.86667"
+     inkscape:window-x="25"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3037" /><defs
+     id="defs3039"><style
+       type="text/css"
+       id="style3041">
     .str0 {stroke:black;stroke-width:35.27}
     .str1 {stroke:black;stroke-width:35.27;stroke-linecap:round}
     .fil0 {fill:none}
-  </style></defs><circle cy="385" cx="385" r="367" class="fil0 str0"/><polyline points="385 18 385 385 529 251" class="fil0 str1"/></svg>
+  </style></defs><circle
+     cy="385"
+     cx="385"
+     r="367"
+     class="fil0 str0"
+     id="circle3043"
+     style="fill:none;stroke:#000000;stroke-width:100;stroke-miterlimit:4;stroke-dasharray:none"
+     sodipodi:cx="385"
+     sodipodi:cy="385"
+     sodipodi:rx="367"
+     sodipodi:ry="367"
+     transform="matrix(0.92685851,0,0,0.92685851,29.659472,25.659474)" /><polyline
+     points="385 18 385 385 529 251"
+     class="fil0 str1"
+     id="polyline3045"
+     style="fill:none;stroke:#555753;stroke-width:100;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
+     transform="matrix(0.92685851,0,0,0.92685851,29.659472,25.659474)" /></svg>
