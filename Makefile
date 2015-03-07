@@ -36,3 +36,4 @@ raw:
 
 pack:
 	cd $(BUILD); google-chrome --pack-extension=$(EXT_DIR)
+	cd $(BUILD_RAW); zip -r ../uptime.zip *

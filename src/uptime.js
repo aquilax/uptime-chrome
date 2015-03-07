@@ -41,7 +41,7 @@ function formatResult(times) {
 	if (times.day > 1) {
 		result.push(times.day + ' days');
 	}
-	if (times.day = 1) {
+	if (times.day === 1) {
 		result.push(times.day + ' day');
 	}
 	result.push(' ');
@@ -57,6 +57,6 @@ function formatResult(times) {
 
 chrome.browserAction.onClicked.addListener(function(tab) {
 	options.message = 'Up ' + formatResult(getUptime(started, new Date()));
-	chrome.notifications.create("uptime", options, function(notificationId){});
+	chrome.notifications.create('', options, function(notificationId){});
 	 _gaq.push(['_trackEvent', 'uptime', 'clicked']);
 });
