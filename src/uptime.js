@@ -1,4 +1,3 @@
-var started = new Date();
 var options = {
 	type: "basic",
 	title: "Browser Uptime",
@@ -55,8 +54,20 @@ function formatResult(times) {
 	return result.join('');
 }
 
+function setup(date) {
+  return localStorage.setItem('started', date)
+}
+
 chrome.browserAction.onClicked.addListener(function(tab) {
+  var started = new Date(localStorage.getItem('started'));
 	options.message = 'Up ' + formatResult(getUptime(started, new Date()));
 	chrome.notifications.create('', options, function(notificationId){});
 	 _gaq.push(['_trackEvent', 'uptime', 'clicked']);
+});
+
+chrome.runtime.onStartup.addListener(function (){
+  setup(new Date());
+});
+chrome.runtime.onInstalled.addListener(function (){
+  setup(new Date());
 });
