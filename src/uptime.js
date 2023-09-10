@@ -1,27 +1,16 @@
 var options = {
   type: "basic",
   title: "Browser Uptime",
-  iconUrl: "icon_128.png"
+  iconUrl: "icon_128.png",
 };
+
 var segments = {
   day: 86400000,
   hour: 3600000,
   minute: 60000,
   second: 1000,
-  millisecond: 1
+  millisecond: 1,
 };
-var _gaq = _gaq || [];
-_gaq.push(["_setAccount", "UA-115818-5"]);
-_gaq.push(["_trackPageview"]);
-
-(function() {
-  var ga = document.createElement("script");
-  ga.type = "text/javascript";
-  ga.async = true;
-  ga.src = "https://ssl.google-analytics.com/ga.js";
-  var s = document.getElementsByTagName("script")[0];
-  s.parentNode.insertBefore(ga, s);
-})();
 
 function lz(num, size) {
   var pad = new Array(1 + size).join("0");
@@ -31,7 +20,7 @@ function lz(num, size) {
 function getUptime(from, to) {
   var result = {};
   var interval = to - from;
-  Object.keys(segments).forEach(function(key) {
+  Object.keys(segments).forEach(function (key) {
     result[key] = ~~(interval / segments[key]);
     interval -= result[key] * segments[key];
   });
@@ -58,21 +47,21 @@ function formatResult(times) {
 }
 
 function setup(date) {
-  return chrome.storage.local.set({ started: date }, function() {});
+  return chrome.storage.local.set({ started: date }, function () {});
 }
 
-chrome.browserAction.onClicked.addListener(function(tab) {
-  chrome.storage.local.get(["started"], function(result) {
+chrome.browserAction.onClicked.addListener(function (tab) {
+  chrome.storage.local.get(["started"], function (result) {
     var started = new Date(result.started);
     options.message = "Up " + formatResult(getUptime(started, new Date()));
-    chrome.notifications.create("", options, function(notificationId) {});
-    _gaq.push(["_trackEvent", "uptime", "clicked"]);
+    chrome.notifications.create("", options, function (notificationId) {});
   });
 });
 
-chrome.runtime.onStartup.addListener(function() {
+chrome.runtime.onStartup.addListener(function () {
   setup(new Date().toString());
 });
-chrome.runtime.onInstalled.addListener(function() {
+
+chrome.runtime.onInstalled.addListener(function () {
   setup(new Date().toString());
 });

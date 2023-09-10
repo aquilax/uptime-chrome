@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Uptime",
   "short_name": "Browser Uptime",
-  "version": "0.4",
+  "version": "0.5",
   "description": "Tracks browser uptime",
   "icons": {
     "16": "icon_16.png",
@@ -18,7 +18,6 @@
     ],
     "persistent": false
   },
-  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
   "permissions": [
     "notifications",
     "storage"
