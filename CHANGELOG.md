@@ -1,3 +1,6 @@
+0.6:
+* Upgrade to manifest v3
+
 0.5:
 * Removed GA integration
 

@@ -50,7 +50,7 @@ function setup(date) {
   return chrome.storage.local.set({ started: date }, function () {});
 }
 
-chrome.browserAction.onClicked.addListener(function (tab) {
+chrome.action.onClicked.addListener(function (tab) {
   chrome.storage.local.get(["started"], function (result) {
     var started = new Date(result.started);
     options.message = "Up " + formatResult(getUptime(started, new Date()));
