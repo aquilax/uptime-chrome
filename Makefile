@@ -1,14 +1,11 @@
 SHELL := /bin/bash
-
 SRC = ./src
-
 ASSETS = ./assets
-
-EXT_DIR = uptime 
-
+EXT_DIR = uptime
 BUILD = ./build
 BUILD_ICONS = $(BUILD)/icons
 BUILD_RAW = $(BUILD)/$(EXT_DIR)
+VERSION := $(shell jq -r .version $(SRC)/manifest.json)
 
 ICON_SIZES = 16 19 48 128
 
@@ -23,7 +20,7 @@ dirs:
 
 icons:
 	$(foreach size, $(ICON_SIZES), \
-		inkscape $(ASSETS)/icon.svg -w $(size) -h $(size) --export-png=$(BUILD_ICONS)/icon_$(size).png ; \
+		inkscape $(ASSETS)/icon.svg -w $(size) -h $(size) --export-filename=$(BUILD_ICONS)/icon_$(size).png ; \
 	)
 
 raw:
@@ -35,5 +32,4 @@ raw:
 	cp $(BUILD_ICONS)/icon_128.png $(BUILD_RAW)
 
 pack:
-	cd $(BUILD); google-chrome --pack-extension=$(EXT_DIR)
-	cd $(BUILD_RAW); zip -r ../uptime.zip *
+	cd $(BUILD_RAW); zip -r ../uptime-$(VERSION).zip *; cd ..
